@@ -7,15 +7,18 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="style.css">
     <!-- Incluir jquery e js do bootstrap -->
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="produtos.json" charset="UTF-8"></script>
+    <script type="text/javascript" src="javascripts/script.js" ></script>
     <link href="computer.png" rel="shortcut icon" type="image/x-icon" />
     <title>Processador</title>
 </head>
 <body>
     
     
-        <!-- NAV BAR -->
+            <!-- NAV BAR -->
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <a href="index.html"><img src="logoo.png" width="250px"></a> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,15 +42,23 @@
 
         <!-- CORPO PAG PRINCIPAL -->
         
-        <div class="col" style="background-color: rgb(0, 0, 0);" >
+        <div class="col-sm-12" style="background-color: rgb(0, 0, 0);" >
             <br><br><h1 class="textoprincipal col text-center font-weight-bold ">PROCESSADORES</h1><br>
         </div>
 
         <div class="container-fluid bg-dark">
 
         <br><br>
-            <h1 class="titulo text-center font-weight-bold" style="color: rgb(255, 255, 255); margin: 20px; max-width: 50%; min-width: 100px; margin-left: 27%;"> CONFIRA OS MELHORES PROCESSADORES!</h1>
-            <img src="comp.png" width="70px" style="position: relative; margin-left: 47%; margin-bottom: 3%;"></img>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="titulo text-center font-weight-bold" style=" text-align: center; color: rgb(255, 255, 255); margin: 20px; font-size: 2em"> CONFIRA OS MELHORES PROCESSADORES!</h1>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <img src="comp.png" width="70px" style=" margin-left: 40%; margin-bottom: 3%;"></img>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
 
         <!-- COMPONENTES -->        
             <div class="row">
@@ -55,10 +66,10 @@
                 </div>
                 <div class="col-10 bg-danger rounded">
                     <div class="row">
-                        <div class="col-sm-6 ">
-                            <img src="i9.png" style="width: 20em;"></img>
+                        <div class="col-sm-6">
+                            <img src="i9.png" style="width: 90%; max-width:340px;"></img>
                         </div> 
-                        <div class="col-sm-6   text-justify">
+                        <div class="col-sm-6  text-justify">
                             <h2 class="col text-center font-weight-bold" style="margin-top: 1%;">Intel Core i9-9900K</h2>
                             <h3 class="col font-italic" style="margin-top: 6%;">- Nº de núcleos: 8 <br>
                                 - Nº de Threads: 16<br>
@@ -82,8 +93,8 @@
                 </div>
                 <div class="col-10 bg-danger rounded">
                     <div class="row">
-                        <div class="col-sm-6 ">
-                            <img src="i7.png" style="width: 20em; margin-top: 3%;"></img>
+                        <div class="col-sm-6">
+                            <img src="i7.png" style="width: 85%; max-width:340px margin-top: 3%;"></img>
                         </div> 
                         <div class="col-sm-6  text-justify">
                             <h2 class="col text-center font-weight-bold" style="margin-top: 1%;">Intel Core i7-9700 </h2>
@@ -108,10 +119,10 @@
                 </div>
                 <div class="col-10 bg-danger rounded">
                     <div class="row">
-                        <div class="col-sm-6 ">
-                            <img src="i5.jpg" style="width: 20em;"></img>
+                        <div class="col-sm-6">
+                            <img src="i5.jpg" style="width: 90%; max-width:340px;"></img>
                         </div> 
-                        <div class="col-sm-6   text-justify">
+                        <div class="col-sm-6  text-justify">
                             <h2 class="col text-center font-weight-bold" style="margin-top: 1%;">Intel Core i5-10400F </h2>
                             <h3 class="col font-italic" style="margin-top: 6%;">- Núcleos: 6<br>
                                 - Threads: 12<br>
@@ -130,8 +141,14 @@
 
             <br><br><br><br><br>
             <!-- VIDEOS --> 
-
-            <img src="computer.png" width="70px" style="position: relative; margin-left: 48%; margin-bottom: 4%;"></img>
+            <div class="row">
+                
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <img src="computer.png" width="70px" style="position: relative; margin-left: 40%; margin-bottom: 4%;"></img>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
 
         </div>
 
