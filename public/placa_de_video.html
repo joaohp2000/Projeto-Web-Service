@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Incluir css do bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <!-- Incluir jquery e js do bootstrap -->
+    <script type="text/javascript" src="javascripts/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="produtos.json" charset="UTF-8"></script>
+    <script type="text/javascript" src="javascripts/script.js" ></script>
+    <link href="computer.png" rel="shortcut icon" type="image/x-icon" />
+    <title>Placa de video</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload=function(){
+            inicializa();
+            console.log( placasDV[1].nome)
+        }
+    </script>
+  
+       
+    </script>
+    
+        <!-- NAV BAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a href="home.html"><img src="logoo.png" width="250px"></a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar"><br>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class=" nav-item active" style="margin-left: 15%;">
+                    <a class=" nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;"  href="processador.html">Processador</a>
+                  </li>
+                  <li class=" nav-item active" style="margin-left: 15%;">
+                    <a class="nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;" href="placa_de_video.html">Placa de vídeo</a>
+                  </li>
+                  <li class="navig nav-item active" style="margin-left: 15%;">
+                    <a class=" nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;" href="memoria.html">Memória</a>
+                  </li>
+                </ul>
+        </nav>
+        <!-- NAV BAR -->
+
+
+        <!-- CORPO PAG PRINCIPAL -->
+        
+        
+        <div class="col" style="background-color: rgb(0, 0, 0);" >
+            <br><br><h1 class="textoprincipal col text-center font-weight-bold ">PLACAS DE VÍDEO</h1><br>
+        </div>
+        <div class="container-fluid">
+            <div class="accordion" id="accordionExample">
+                <div class="row">
+                    <div class="col-sm-12" >
+                        <div class="container-fluid" >
+                            <div class="card" style >
+                                <button onclick="detalhes('0')" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    <img  id="0xim" class="card-img-top" src="images/0x0.jpg" style="width: 30rem;" alt="Imagem de capa do card">
+                                    <div class="card-body" >
+                                        <h5 id=0x0>Placa 3080</h5>
+                                    </div>
+                                </button>
+                                <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <h5 class="card-text" id="0x1"></h5>
+                                        <h5 class="card-text" id="0x2"></h5>
+                                        <h5 class="card-text" id="0x3"></h5>
+                                        <h5 class="card-text" id="0x4"></h5>
+                                    </div>
+                            </div>
+                        </div>
+                            
+                        
+                    </div>
+                    <div class="col-sm-12" >
+                        <div class="container-fluid">
+                            <div class="card" style  >
+                                <button onclick="detalhes('1')" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                    <img id="1xim" class="card-img-top" src="images/1x0.jpg" style="width: 30rem;" alt="Imagem de capa do card">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="1x0">Placa 3080</h5>
+                                    </div>
+                                </button>
+                                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+                                    <h5 class="card-text" id="1x1"></h5>
+                                    <h5 class="card-text" id="1x2"></h5>
+                                    <h5 class="card-text" id="1x3"></h5>
+                                    <h5 class="card-text" id="1x4"></h5>
+                            </div>
+                            </div>
+                        </div>
+                            
+                        
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="container-fluid" >
+                            <div class="card" style  >
+                                <button onclick="detalhes('2')" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                    <img id="2xim" class="card-img-top" src="images/2x0.jpg" style="width: 30rem;" alt="Imagem de capa do card">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="2x0">Placa 3080</h5>
+                                    </div>
+                                </button>
+                                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+                                    <h5 class="card-text" id="2x1"></h5>
+                                    <h5 class="card-text" id="2x2"></h5>
+                                    <h5 class="card-text" id="2x3"></h5>
+                                    <h5 class="card-text" id="2x4"></h5> 
+                            </div>
+                            </div>
+                        </div> 
+                            
+                        <br><br>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="container-fluid">
+                            <div class="card" style  >
+                                <button onclick="detalhes('3')" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                    <img class="card-img-top" id="3xim" src="images/3x0.jpg" style="width: 30rem;" alt="Imagem de capa do card">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="3x0">Placa 3080</h5>
+                                    </div>
+                                </button>
+                                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                                    <h5 class="card-text" id="3x1"></h5>
+                                    <h5 class="card-text" id="3x2"></h5>
+                                    <h5 class="card-text" id="3x3"></h5>
+                                    <h5 class="card-text" id="3x4"></h5>
+                            </div>
+                            </div>
+                        </div>
+                            
+                        
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="container-fluid">
+                            <div class="card" style >
+                                <button onclick="detalhes('4')" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                    <img  id="4xim" class="card-img-top" src="images/4x0.jpg" style="width: 30rem;" alt="Imagem de capa do card">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="4x0">Placa 3080</h5>
+                                    </div>
+                                </button>
+                                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                                    <h5 class="card-text" id="4x1"></h5>
+                                    <h5 class="card-text" id="4x2"></h5>
+                                    <h5 class="card-text" id="4x3"></h5>
+                                    <h5 class="card-text" id="4x4"></h5>
+                            </div>
+                            </div>
+                        </div>
+                            
+                        
+                    </div>
+                    <div class="col-sm-12" >
+                        <div class="container-fluid" >
+                            <div class="card" style  >
+                                <button onclick="detalhes('5')" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                                    <img  id="5xim" class="card-img-top" src="images/5x0.jpg" style="width: 30rem;" alt="Imagem de capa do card">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="5x0">Placa 3080</h5>
+                                    </div>
+                                </button>
+                                <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+                                    <h5 class="card-text" id="5x1"></h5>
+                                    <h5 class="card-text" id="5x2"></h5>
+                                    <h5 class="card-text" id="5x3"></h5>
+                                    <h5 class="card-text" id="5x4"></h5>
+                                    </div>
+                            </div>
+                        </div>
+                            
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+            <br><br>
+
+            <br><br><br><br><br>
+            <!-- VIDEOS --> 
+
+            <img src="computer.png" width="70px" style="position: relative; margin-left: 48%; margin-bottom: 4%;"></img>
+
+        
+
+            
+        <!-- RODAPÉ -->
+    <footer class="container-fluid text-center" style="background-color: black;">
+        <img src="logoo.png" width="300px" style="margin-top: 2%;"></img><br>
+          <p style="color: white;">CopyRight © Leonardo Sanavio & João Henrique Pereira</p><br>
+      </footer>
+      <!-- RODAPÉ -->
+            
+        
+    
+        <!-- CORPO PAG PRINCIPAL -->

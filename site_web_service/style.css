@@ -1,0 +1,31 @@
+.textoprincipal{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.titulo{
+    font-family: inherit;
+    size: 3em;
+}
+
+.slides{
+    border-style: solid;
+    border: 5px;
+    border-color: white;
+    border-radius: 1%;
+}
+
+.videos{
+   width: 100%; 
+}
+
+.botoes{
+    margin-top: 4%;
+    margin-left: 1%;
+}
+
+.film_link{
+    color: black;
+    font-family: fantasy;
+}

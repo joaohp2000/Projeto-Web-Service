@@ -1,0 +1,143 @@
+var processador = [{
+    "id":"0",
+    "nome":"Intel Core i9-9900K",
+    "nucleos": "8",
+    "Threads": "16",
+    "fmin": "3.60 GHZ",
+    "fmax": "5.00 GHZ",
+    "cache": "16 MB",
+    "vBarramento": "8 GT /S"
+}, {
+    "id":"1",
+    "nome":"Intel Core i7-9700",
+    "nucleos": "8",
+    "Threads": "8",
+    "fmin": "3.00 GHZ",
+    "fmax": "4.70 GHZ",
+    "cache": "12 MB",
+    "vBarramento": "8 GT /S"
+}, {
+    "id":"2",
+    "nome":"Intel Core i5-10400F",
+    "nucleos": "6",
+    "Threads": "12",
+    "fmin": "2.90 GHZ",
+    "fmax": "4.30 GHZ",
+    "cache": "12 MB",
+    "vBarramento": "8 GT /S"
+}];
+
+var memoria = [{
+    "id":"0",
+    "nome":"Memória RAM 16GB DDR4 HYPERX",
+    "pinos": "288",
+    "velocidade": "2400MHZ",
+    "latencia": "15",
+    "voltagem": "1,2V",
+    "config1": "- Formato:UDIMM",
+    "config2": "- XMP-Ready",
+    "config3": "Plug & Play",
+    "config4": "Sapphire"
+}, {
+    "id":"1",
+    "nome":"Memória RAM 8GB DDR4 CORSAIR",
+    "pinos": "288",
+    "velocidade": "2400MHZ",
+    "latencia": "16",
+    "voltagem": "1,2V",
+    "config1": "- Tecnologia:DIMM",
+    "config2": "- Timing: 16-16-16-39",
+    "config3": "Plug & Play",
+    "config4": "Sapphire"
+}, {
+    "id":"2",
+    "nome":"Memória RAM 4GB DDR4 CORSAIR",
+    "pinos": "240",
+    "velocidade": "1600MHZ",
+    "latencia": "9-9-9-24",
+    "voltagem": "1,5V",
+    "config1": "- Configuração da Memória Single Module",
+    "config2": "- Perfil de Desempenho XMP",
+    "config3": "Plug & Play",
+    "config4": "Sapphire"
+}];
+
+
+
+
+var placasDV = [{
+    "id":"0",
+    "nome":"Placa de Vídeo Sapphire AMD Radeon RX 550 Pulse 4G, GDDR5 - 11268-01-20G",
+    "link": "https://www.kabum.com.br/produto/89279/placa-de-v-deo-sapphire-amd-radeon-rx-550-pulse-4g-gddr5-11268-01-20g",
+    "preco": "799,00",
+    "memoria": "4G",
+    "memoria_tipo": "GDDR5",
+    "marca_chip": "AMD",
+    "marca": "Sapphire"
+}, {
+    "id":"1",
+    "nome": "Placa de Vídeo Gigabyte NVIDIA GeForce GTX 1650 D6 WINDFORCE OC, 4G, GDDR6, Rev. 2.0 - GV-N1656WF2OC-4GD",
+    "link": "https://www.kabum.com.br/produto/118865/placa-de-v-deo-gigabyte-nvidia-geforce-gtx-1650-d6-windforce-oc-4g-gddr6-rev-2-0-gv-n1656wf2oc-4gd",
+    "preco": "1121,86",
+    "memoria": "4G",
+    "memoria_tipo": "GDDR6",
+    "marca_chip": "NVIDIA",
+    "marca": "Gigabyte"
+}, {
+    "id":"2",
+    "nome": "Placa de Vídeo Galax NVIDIA GeForce RTX 2070 Super 1-Click OC, 8GB, GDDR6 - 27ISL6MD441C",
+    "link": "https://www.kabum.com.br/produto/125429/placa-de-v-deo-galax-nvidia-geforce-rtx-2070-super-1-click-oc-8gb-gddr6-27isl6md441c",
+    "preco": "4199,90",
+    "memoria": "8GB",
+    "memoria_tipo": "GDDR6",
+    "marca_chip": "NVIDIA",
+    "marca": "Galax"
+}, {
+    "id":"3",
+    "nome": "Placa de Vídeo Sapphire Pulse Lite Edition AMD RX 580, 8GB, GDDR5 - 11265-67-20G",
+    "link": "https://www.kabum.com.br/produto/115218/placa-de-v-deo-sapphire-pulse-lite-edition-amd-rx-580-8gb-gddr5-11265-67-20g",
+    "preco": "1530,90",
+    "memoria_tipo": "GDDR5",
+    "memoria": "8GB",
+    "marca_chip": "AMD",
+    "marca": "Sapphire"
+}, {
+    "id":"4",
+    "nome": "Placa de Vídeo Asus TUF3 NVIDIA GeForce GTX 1660 SUPER, 14.0 Gbps, 6GB, GDDR6, Turing Shaders - TUF 3-GTX1660S-O6G-GAMING",
+    "link1": "https://www.kabum.com.br/produto/104752/placa-de-v-deo-asus-tuf3-nvidia-geforce-gtx-1660-super-14-0-gbps-6gb-gddr6-turing-shaders-tuf-3-gtx1660s-o6g-gaming",
+    "preco": "2199,90",
+    "memoria_tipo": "GDDR6",
+    "memoria": "6GB",
+    "marca_chip": "NVIDIA",
+    "marca": "Asus"
+}, {
+    "id":"5",
+    "nome": "Placa de Vídeo Gigabyte AMD Radeon RX 5600 XT Windforce OC 6G, 6GB, DDR6, Rev 2.0 - GV-R56XTWF2OC-6GD",
+    "link": "https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=113296",
+    "preco": "3058,71",
+    "memoria_tipo": "GDDR6",
+    "memoria": "6GB",
+    "marca_chip": "AMD",
+    "marca": "Gigabyte"
+}, {
+    "id":"6",
+    "nome": "Placa de Vídeo Asus TUF NVIDIA GeForce RTX 2060, 14.0 Gbps, 6GB, GDDR6, Turing, Shadowplay, Ray Tracing - TUF-RTX2060-O6G-GAMING",
+    "link": "https://www.kabum.com.br/produto/101228/placa-de-v-deo-asus-tuf-nvidia-geforce-rtx-2060-14-0-gbps-6gb-gddr6-turing-shadowplay-ray-tracing-tuf-rtx2060-o6g-gaming",
+    "preco": "2299,90",
+    "memoria_tipo": "GDDR6",
+    "memoria": "6GB",
+    "marca_chip": "NVIDIA",
+    "marca": "Asus"
+}, {
+    "id":"7",
+    "nome":"Placa de Vídeo Asus NVIDIA GeForce GTX 1050 Ti OC Cerberus 4GB, GDDR5 - CERBERUS-GTX1050TI-O4G",
+    "link": "https://www.kabum.com.br/produto/95459/placa-de-v-deo-asus-nvidia-geforce-gtx-1050-ti-oc-cerberus-4gb-gddr5-cerberus-gtx1050ti-o4g",
+    "preco": "949,90",
+    "memoria_tipo": "GDDR5",
+    "memoria": "4GB",
+    "marca_chip": "NVIDIA",
+    "marca": "Asus"
+}];
+
+
+
