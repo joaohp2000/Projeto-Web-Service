@@ -81,9 +81,24 @@
             </div>
         </div>
             <!-- CARDS --> 
-
-
           </div>
+
+          <!-- CHATBOT --> 
+          <script>
+            window.watsonAssistantChatOptions = {
+                integrationID: "d676e0d5-5dd4-4cc8-b3a4-50ec99b47c34",
+                region: "us-south", 
+                serviceInstanceID: "e406d5b2-0951-497a-b139-39265a0b61c2", 
+                onLoad: function(instance) { instance.render(); }
+              };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+              document.head.appendChild(t);
+            });
+          </script>
+          <!-- CHATBOT --> 
+
             <br><br><br><br>
 
             <img src="computer.png" width="70px" style="position: relative; margin-left: 48%; margin-bottom: 4%;"></img>
