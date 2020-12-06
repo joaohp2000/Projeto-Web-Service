@@ -15,9 +15,11 @@ function inicializa(){
 }
 
 function inicializa2(produto, id){
+    
     if(produto==0){
     document.getElementById("0xim").src ="images/"+id+"x0.jpg";
     document.getElementById("0x0").innerHTML = placasDV[id].nome;
+    document.getElementById("tit").innerHTML = placasDV[id].nome;
     document.getElementById("0x1").innerHTML="Quantia de Memória:"+placasDV[id].memoria;
     document.getElementById("0x2").innerHTML="Tipo de Memória:"+placasDV[id].memoria_tipo;
     document.getElementById("0x3").innerHTML="Marca do Chip:"+placasDV[id].marca_chip;
@@ -26,6 +28,7 @@ function inicializa2(produto, id){
     if(produto==1){
     document.getElementById("0xim").src ="images/"+id+"p.png";
     document.getElementById("0x0").innerHTML = processador[id].nome;
+    document.getElementById("tit").innerHTML = processador[id].nome;
     document.getElementById("0x1").innerHTML="- Nº de núcleos:"+processador[id].nucleos;
     document.getElementById("0x2").innerHTML="- Nº de Threads:"+processador[id].Threads;
     document.getElementById("0x3").innerHTML="- Frequência base do processador:"+processador[id].fmin;
@@ -36,6 +39,7 @@ function inicializa2(produto, id){
     if(produto==2){
         document.getElementById("0xim").src ="images/ram"+id+".png";
         document.getElementById("0x0").innerHTML = memoria[id].nome;
+        document.getElementById("tit").innerHTML = memoria[id].nome;
         document.getElementById("0x1").innerHTML="- Pinagem:"+memoria[id].pinos;
         document.getElementById("0x2").innerHTML="- Velocidade:"+memoria[id].velocidade;
         document.getElementById("0x3").innerHTML="- Latência:"+memoria[id].latencia;
