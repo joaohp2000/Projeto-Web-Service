@@ -56,7 +56,7 @@
           <!-- CARDS -->  
           <div class="row" > 
             <div class=col-sm-4>
-              <div class="card " style="width: 18em; background-color: black;  margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
+              <div class="card " style=" background-color: black;  margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
                
                 <img class="card-img-top" src="i9.png" alt="Imagem de capa do card">
                 <div class="card-body">
@@ -68,7 +68,7 @@
             </div>
             </div> 
             <div class=col-sm-4>
-              <div class="card" style="width: 18rem; background-color: black; margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
+              <div class="card" style=" background-color: black; margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
                 <img class="card-img-top" src="3080.png" alt="Imagem de capa do card">
                 <div class="card-body">
                   <h5 class="card-title" style="color: white;">Placas de vídeo</h5>
@@ -78,7 +78,7 @@
               </div>
             </div>
             <div class=col-sm-4>
-             <div class="card" style="width: 18rem; background-color: black; margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
+             <div class="card" style=" background-color: black; margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
               <img class="card-img-top" src="ram.png" alt="Imagem de capa do card" style="margin-top: 10%;">
               <div class="card-body" style="margin-top: 30%;">
                 <h5 class="card-title" style="color: white;">Memórias</h5>
@@ -90,7 +90,7 @@
             
            
 
-            <
+            
         </div>
             <!-- CARDS --> 
           </div>
@@ -111,11 +111,90 @@
           </script>
           <!-- CHATBOT --> 
 
-            <br><br><br><br>
+            <br><br>
 
-            <img src="computer.png" width="70px" style="position: relative; margin-left: 48%; margin-bottom: 4%;"></img>
-
+            <div class="row">
+                
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4">
+                  <img src="computer.png" width="70px" style="position: relative; margin-left: 40%; margin-bottom: 4%;"></img>
+              </div>
+              <div class="col-sm-4"></div>
+          </div>
       </div>
+      <div class="container">
+      <div class="row">
+    
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+           
+
+      <!-- TEXTO PARA VOZ -->
+      <div style="border-radius: 5px; width: 90%; margin-left: 5%; background-color: rgba(14, 14, 14, 0.486); ">
+        <h1 class="text-center font-weight-bold" style="color: rgb(241, 75, 75); margin: 20px; "> Conversor de texto para voz</h1>
+        <h5 class="text-center font-weight-bold" style="color: rgb(241, 75, 75); margin: 20px; "> Selecione o idioma:</h5>
+        
+
+      <div class="row">             
+        <div class="col-sm-12">
+          <select id='voiceList' style="width: 90%; margin-left: 5%;" ></select> <br><br>
+          
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-6">
+          <input id='txtInput'  style="width: 96%; margin-left: 2%;" />  
+        </div>
+        <div class="col-sm-2">
+          <button id='btnSpeak' style="width: 100%; max-width: 70px; margin-left: 40%">Falar</button>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+  <script>
+      var txtInput = document.querySelector('#txtInput');
+      var voiceList = document.querySelector('#voiceList');
+      var btnSpeak = document.querySelector('#btnSpeak');
+      var synth = window.speechSynthesis;
+      var voices = [];
+
+      PopulateVoices();
+      if(speechSynthesis !== undefined){
+          speechSynthesis.onvoiceschanged = PopulateVoices;
+      }
+
+      btnSpeak.addEventListener('click', ()=> {
+          var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
+          var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+          voices.forEach((voice)=>{
+              if(voice.name === selectedVoiceName){
+                  toSpeak.voice = voice;
+              }
+          });
+          synth.speak(toSpeak);
+      });
+
+      function PopulateVoices(){
+          voices = synth.getVoices();
+          var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+          voiceList.innerHTML = '';
+          voices.forEach((voice)=>{
+              var listItem = document.createElement('option');
+              listItem.textContent = voice.name;
+              listItem.setAttribute('data-lang', voice.lang);
+              listItem.setAttribute('data-name', voice.name);
+              voiceList.appendChild(listItem);
+          });
+
+          voiceList.selectedIndex = selectedIndex;
+      }
+  </script>
+  <br><br>
+  </div>
+  <!-- TEXTO PARA VOZ -->
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+    <br>
     <!-- CORPO PAG PRINCIPAL -->
 
     <!-- RODAPÉ -->
