@@ -1,6 +1,6 @@
 var processador = [{
     "id":"0",
-    "nome":"Intel Core i9-9900K",
+    "nome":"Intel Core i5-10400F",
     "nucleos": "8",
     "Threads": "16",
     "fmin": "3.60 GHZ",
@@ -18,7 +18,7 @@ var processador = [{
     "vBarramento": "8 GT /S"
 }, {
     "id":"2",
-    "nome":"Intel Core i5-10400F",
+    "nome":"Intel Core i9-9900K",
     "nucleos": "6",
     "Threads": "12",
     "fmin": "2.90 GHZ",
