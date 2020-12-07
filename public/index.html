@@ -9,11 +9,14 @@
     <!-- Incluir jquery e js do bootstrap -->
     <script type="text/javascript" src="javascripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="javascripts/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="javascripts/Translate.js"></script>
     <link href="computer.png" rel="shortcut icon" type="image/x-icon" />
     <title>Info Shop</title>
 </head>
 <body>
-    
+    <script>
+      var idText = ['processador', 'placadv', 'memoria','titulo1', 'titulo2', 'titulo3','card1x0','card1x1','card1x2', 'card2x0','card2x1','card2x2','card3x0','card3x1','card3x2'];
+    </script>
     
         <!-- NAV BAR -->
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -24,14 +27,30 @@
             <div class="collapse navbar-collapse" id="navbar"><br>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                   <li class=" nav-item active" style="margin-left: 15%;">
-                    <a class=" nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;"  href="processador.html">Processador</a>
+                    <a id="processador" class=" nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;"  href="processador.html">Processador</a>
                   </li>
                   <li class=" nav-item active" style="margin-left: 15%;">
-                    <a class="nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;" href="placa_de_video.html">Placa de vídeo</a>
+                    <a id="placadv" class="nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;" href="placa_de_video.html">Placa de vídeo</a>
                   </li>
                   <li class="navig nav-item active" style="margin-left: 15%;">
-                    <a class=" nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;" href="memoria.html">Memória</a>
+                    <a id="memoria" class=" nav-link font-weight-bold text-uppercase" style="color: white; width: 150px;" href="memoria.html">Memória</a>
                   </li>
+                  <li class="navig nav-item active" style="margin-left: 15%;">
+                    <div >
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                            <div class="btn-group bottonband1" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bottonband" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a id="languagens"> <img class="imgLanguages"> </a>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <a id="Ingles" class="dropdown-item namelng" onclick="translateAPI(idText, true)"> <span id="ingles"> Inglês </span> </a>
+                                    <a id="Portugues" class="dropdown-item namelng" onclick="window.location.reload()">Português</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 </ul>
         </nav>
         <!-- NAV BAR -->
@@ -39,30 +58,30 @@
     <!-- CORPO PAG PRINCIPAL -->
         
         <div class="col" style="background-color: rgb(0, 0, 0);" >
-            <br><br><h1 class="textoprincipal col text-center font-weight-bold ">OS MELHORES EQUIPAMENTOS VOCÊ ENCONTRA AQUI!</h1><br>
+            <br><br><h1 id="titulo1" class="textoprincipal col text-center font-weight-bold ">OS MELHORES EQUIPAMENTOS VOCÊ ENCONTRA AQUI!</h1><br>
         </div>
        
         <div class="container-fluid bg-dark"><br><br><br>
           <br>
             <div>
-              <p class="titulo text-center font-weight-bold" style="font-size:2rem; color: black;  background-color: rgb(252, 98, 98);"> Veja informações dos melhores componentes para seu computador!</p>
+              <p id="titulo2" class="titulo text-center font-weight-bold" style="font-size:2rem; color: black;  background-color: rgb(252, 98, 98);"> Veja informações dos melhores componentes para seu computador!</p>
             </div>
             <br>
             <br>
              <img src="pc.png" style= "min-width:200px; width: 30%; margin-bottom: 5px; position: relative; margin-left: 30%; margin-bottom: 3%;"></img>
 
             <div class="shadow-lg rounded">
-            <h1 class="titulo text-center font-weight-bold" style="color: rgb(241, 75, 75); margin: 20px; width: 50%; margin-left: 25%;"> Escolha sua categoria preferida</h1>
+            <h1 id="titulo3" class="titulo text-center font-weight-bold" style="color: rgb(241, 75, 75); margin: 20px; width: 50%; margin-left: 25%;"> Escolha sua categoria preferida</h1>
           <!-- CARDS -->  
           <div class="row" > 
             <div class=col-sm-4>
               <div class="card " style=" background-color: black;  margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
                
                 <img class="card-img-top" src="i9.png" alt="Imagem de capa do card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: white;">Processadores</h5>
-                  <p class="card-text" style="color: white;">Melhores processadores! Venha conferir!</p>
-                  <a href="processador.html" class="btn btn-dark">Confira</a>
+                <div  class="card-body">
+                  <h5 id="card1x0" class="card-title" style="color: white;">Processadores</h5>
+                  <p  id="card1x1" class="card-text" style="color: white;">Melhores processadores! Venha conferir!</p>
+                  <a  id="card1x2" href="processador.html" class="btn btn-dark">Confira</a>
                 </div>
               
             </div>
@@ -70,20 +89,20 @@
             <div class=col-sm-4>
               <div class="card" style=" background-color: black; margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
                 <img class="card-img-top" src="3080.png" alt="Imagem de capa do card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: white;">Placas de vídeo</h5>
-                  <p class="card-text" style="color: white;">Melhores placas de vídeo! Venha conferir!</p>
-                  <a href="placa_de_video.html" class="btn btn-dark" >Confira</a>
+                <div id="card2" class="card-body">
+                  <h5 id="card2x0" class="card-title" style="color: white;">Placas de vídeo</h5>
+                  <p  id="card2x1" class="card-text" style="color: white;">Melhores placas de vídeo! Venha conferir!</p>
+                  <a  id="card2x2" href="placa_de_video.html" class="btn btn-dark" >Confira</a>
                 </div>
               </div>
             </div>
             <div class=col-sm-4>
              <div class="card" style=" background-color: black; margin-left: 8%;  margin-top: 5%;margin-bottom: 5%;">
               <img class="card-img-top" src="ram.png" alt="Imagem de capa do card" style="margin-top: 10%;">
-              <div class="card-body" style="margin-top: 30%;">
-                <h5 class="card-title" style="color: white;">Memórias</h5>
-                <p class="card-text" style="color: white;">Melhores memórias! Venha conferir!</p>
-                <a href="memoria.html" class="btn btn-dark">Confira</a>
+              <div id="card3" class="card-body" style="margin-top: 30%;">
+                <h5 id="card3x0" class="card-title" style="color: white;">Memórias</h5>
+                <p  id="card3x1" class="card-text" style="color: white;">Melhores memórias! Venha conferir!</p>
+                <a  id="card3x2" href="memoria.html" class="btn btn-dark">Confira</a>
               </div>
             </div>
             </div> 
@@ -142,7 +161,8 @@
         </div>
         <div class="col-sm-2"></div>
         <div class="col-sm-6">
-          <input id='txtInput'  style="width: 96%; margin-left: 2%;" />  
+          <input id='txtInput'  style="width: 96%; margin-left: 2%;" />
+            
         </div>
         <div class="col-sm-2">
           <button id='btnSpeak' style="width: 100%; max-width: 70px; margin-left: 40%">Falar</button>
@@ -194,8 +214,9 @@
         <div class="col-sm-1"></div>
       </div>
     </div>
+  
     <br>
-    </div>
+  </div>
     <!-- CORPO PAG PRINCIPAL -->
 
     <!-- RODAPÉ -->
